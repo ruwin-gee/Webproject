@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Climate Action</title>
+    <link rel="stylesheet" href="global1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== TEAM PAGE SPECIFIC STYLES ===== */
+
+        /* Page hero banner */
+        .team-banner {
+            background: linear-gradient(135deg, #14532d 0%, #166534 50%, #4ade80 100%);
+            color: white;
+            padding: 72px 24px 60px;
+            text-align: center;
+        }
+        .team-banner h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin: 0 0 14px;
+            letter-spacing: -0.02em;
+        }
+        .team-banner p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* Main section container */
+        .team-section {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 56px 24px 80px;
+        }
+
+        /* Hover hint message */
+        .hover-hint {
+            text-align: center;
+            font-size: 0.88rem;
+            color: #737373;
+            font-style: italic;
+            margin-bottom: 48px;
+        }
+
+        /* 4-column responsive grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 32px;
+        }
+        @media (min-width: 640px) {
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+            .team-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        /* Each member card — keyboard + hover accessible */
+        .team-card {
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+        }
+        /* Visible focus ring for keyboard users */
+        .team-card:focus {
+            outline: 3px solid #4ade80;
+            outline-offset: 6px;
+            border-radius: var(--radius-large);
+        }
+
+        /* Circular photo */
+        .team-photo-wrapper {
+            width: 144px;
+            height: 144px;
+            margin: 0 auto 16px;
+        }
+        .team-photo {
+            width: 144px;
+            height: 144px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: var(--shadow-custom);
+            background-color: #d4d4d4;
+            /* Hover effects via CSS transitions */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        }
+        .team-card:hover .team-photo,
+        .team-card:focus .team-photo {
+            transform: scale(1.1);
+            box-shadow: 8px 8px 24px rgba(22, 101, 52, 0.4);
+            opacity: 0.88;
+        }
+
+        /* Name and role labels */
+        .team-name {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #171717;
+            margin: 0 0 4px;
+        }
+        .team-role {
+            font-size: 0.875rem;
+            color: #737373;
+            margin: 0 0 12px;
+        }
+
+        /* Expandable details — hidden by default, revealed on hover/focus */
+        .team-details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            margin: 0 8px;
+            background-color: #dcfce7;
+            border-radius: var(--radius-large);
+            border: 1px solid #bbf7d0;
+            transition: max-height 0.4s ease, opacity 0.35s ease, margin 0.3s ease;
+        }
+        .team-card:hover .team-details,
+        .team-card:focus .team-details {
+            max-height: 220px;
+            opacity: 1;
+            margin: 0 8px 8px;
+        }
+        .team-details-inner {
+            padding: 14px 16px;
+            text-align: left;
+        }
+        .team-details-inner p {
+            font-size: 0.8rem;
+            color: #404040;
+            margin: 0 0 8px;
+            line-height: 1.5;
+        }
+        .team-details-inner strong {
+            font-size: 0.75rem;
+            color: #166534;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .team-details-inner ul {
+            font-size: 0.78rem;
+            color: #525252;
+            padding-left: 16px;
+            margin: 0;
+        }
+        .team-details-inner ul li {
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <header><!-- Do not edit header -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="container1">
+                    <div class="container2">
+                        <div class="container3">
+                            <div class="logo">
+                                <img src="images/logo.png" alt="Climate Action Group logo">
+                            </div>
+                            <span class="nav-heading">Climate Action</span>
+                        </div>
+                    </div>
+
+                    <!-- Desktop nav links — Team is active -->
+                    <div class="menu-links">
+                        <a href="home.html" class="nav-link">Home</a>
+                        <a href="ais.html" class="nav-link">Simulator</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                        <a href="profile.html" class="nav-link">Profile</a>
+                        <a href="feedback.html" class="nav-link">Feedback</a>
+                        <a href="team.html" class="nav-link active">Team</a>
+                        <a href="sitemap.html" class="nav-link">Sitemap</a>
+                    </div>
+
+                    <!-- Mobile sidebar -->
+                    <div class="mobile-header">
+                        <input type="checkbox" id="sidebar-toogles">
+                        <div class="logo">
+                            <label for="sidebar-toogles" class="btn1">☰</label>
+                        </div>
+                        <div class="sidebar">
+                            <div class="l-container">
+                                <label class="s-l-1">Menu</label>
+                                <label for="sidebar-toogles" class="s-l-2">X</label>
+                            </div>
+                            <div class="mhref"><a href="home.html" class="nav-link">Home</a></div>
+                            <div class="mhref"><a href="ais.html" class="nav-link">Simulator</a></div>
+                            <div class="mhref"><a href="gallery.html" class="nav-link">Gallery</a></div>
+                            <div class="mhref"><a href="profile.html" class="nav-link">Profile</a></div>
+                            <div class="mhref"><a href="feedback.html" class="nav-link">Feedback</a></div>
+                            <div class="mhref"><a href="team.html" class="nav-link active">Team</a></div>
+                            <div class="mhref"><a href="sitemap.html" class="nav-link">Sitemap</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Banner -->
+        <div class="team-banner">
+            <h1>Meet Our Team</h1>
+            <p>Four students united by a shared commitment to SDG 13: Climate Action and a sustainable future.</p>
+        </div>
+
+        <!-- Team Grid Section -->
+        <section class="team-section">
+            <p class="hover-hint">🖱️ Hover over a member card to discover their contribution</p>
+
+            <div class="team-grid">
+
+                <!-- Student 1 — Template & Home Page -->
+                <div class="team-card" tabindex="0" role="button" aria-label="Alex Johnson — Template and Home Page developer. Hover or press Enter for details.">
+                    <div class="team-photo-wrapper">
+                        <img src="https://drive.google.com/file/d/1CT_ZOJm4lOfmNbczmHPfRww4vadhlBPC/view?usp=drive_link" alt="Randil, student responsible for the shared template and home page" class="team-photo">
+                    </div>
+                    <p class="team-name">Randil</p>
+                    <p class="team-role">Template &amp; Home Page</p>
+                    <div class="team-details" aria-hidden="true">
+                        <div class="team-details-inner">
+                            <p>Built the visual foundation of the website and leads our design system.</p>
+                            <strong>Pages contributed:</strong>
+                            <ul>
+                                <li>Shared HTML Template</li>
+                                <li>Global CSS (style.css)</li>
+                                <li>Home Page</li>
+                                <li>Gallery Page</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 2 — Splash Screen & Simulator -->
+                <div class="team-card" tabindex="0" role="button" aria-label="Sam Smith — Splash Screen and Simulator developer. Hover or press Enter for details.">
+                    <div class="team-photo-wrapper">
+                        <img src="https://drive.google.com/file/d/1CT_ZOJm4lOfmNbczmHPfRww4vadhlBPC/view?usp=drive_link" alt="Zaif, student responsible for the splash screen and action impact simulator" class="team-photo">
+                    </div>
+                    <p class="team-name">Zaif</p>
+                    <p class="team-role">Splash Screen &amp; Simulator</p>
+                    <div class="team-details" aria-hidden="true">
+                        <div class="team-details-inner">
+                            <p>Created the animated entry experience and our interactive impact tool.</p>
+                            <strong>Pages contributed:</strong>
+                            <ul>
+                                <li>Splash Screen</li>
+                                <li>Action Impact Simulator</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 3 — Feedback & Team (YOU) -->
+                <div class="team-card" tabindex="0" role="button" aria-label="Jamie Lee — Feedback and Team page developer. Hover or press Enter for details.">
+                    <div class="team-photo-wrapper">
+                        <img src="https://drive.google.com/file/d/1CT_ZOJm4lOfmNbczmHPfRww4vadhlBPC/view?usp=drive_link" alt="Ruwin, student responsible for the feedback page and team page" class="team-photo">
+                    </div>
+                    <p class="team-name">Ruwin</p>
+                    <p class="team-role">Feedback &amp; Team Page</p>
+                    <div class="team-details" aria-hidden="true">
+                        <div class="team-details-inner">
+                            <p>Designed the community engagement hub and team showcase.</p>
+                            <strong>Pages contributed:</strong>
+                            <ul>
+                                <li>Feedback &amp; Programme Directory</li>
+                                <li>Team Page</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student 4 — Profile & Sitemap -->
+                <div class="team-card" tabindex="0" role="button" aria-label="Taylor Doe — User Profile and Sitemap developer. Hover or press Enter for details.">
+                    <div class="team-photo-wrapper">
+                        <img src="https://drive.google.com/file/d/1CT_ZOJm4lOfmNbczmHPfRww4vadhlBPC/view?usp=drive_link" alt="Ameen, student responsible for the user profile and sitemap pages" class="team-photo">
+                    </div>
+                    <p class="team-name">Ameen</p>
+                    <p class="team-role">User Profile &amp; Sitemap</p>
+                    <div class="team-details" aria-hidden="true">
+                        <div class="team-details-inner">
+                            <p>Developed the personalised profile system and site navigation map.</p>
+                            <strong>Pages contributed:</strong>
+                            <ul>
+                                <li>User Profile Page</li>
+                                <li>SVG Sitemap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer"><!-- Do not edit footer -->
+        <div class="f-container">
+            <div class="f-container1">
+                <div>
+                    <span class="f-heading-0">Climate Action Group</span>
+                    <p class="f-heading">University SDG project — Web Design 4COSC011W</p>
+                </div>
+                <div class="valid-data">
+                    <a href="pageEditor_ST3.html" target="_blank">Page Editor — Student 3</a><br><br>
+                    <a href="validation_ST3.html" target="_blank">Validation — Student 3</a><br><br>
+                    <a href="#">Accessibility Statement</a>
+                </div>
+                <div class="social-icons">
+                    <img src="images/icons8-facebook-48.png" alt="Facebook icon">
+                    <img src="images/icons8-instagram-48.png" alt="Instagram icon">
+                    <img src="images/icons8-whatsapp-48.png" alt="WhatsApp icon">
+                    <img src="images/icons8-youtube-48.png" alt="YouTube icon">
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:20px; font-size:0.8rem; color:#737373;">
+                Student 3 — Jamie Lee &nbsp;|&nbsp; 4COSC011W &nbsp;|&nbsp; University of Westminster
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
