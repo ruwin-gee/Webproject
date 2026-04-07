@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validator Page Student - provide your student name</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+    <style>
+        
+        .conin-section{ 
+            scroll-margin-top: 80px; margin-bottom: 64px;
+            border: 5px solid #007d2e;
+            border-radius: var(--radius-large);
+            
+            box-shadow:
+            0 0 8px rgba(74, 222, 128, 0.25),
+            0 0 20px rgba(74, 222, 128, 0.1);
+            background: white;
+        }
+         /* Reflection box */
+        .reflection-box {
+            background: #fefce8; border: 1px solid #fde68a;
+            border-left: 4px solid #4ade80;
+            border-radius: 8px; padding: 16px 20px; margin: 14px 0;
+        }
+        .reflection-box h4 { font-size: 0.9rem; font-weight: 700; color: #92400e; margin: 0 0 6px; }
+        .reflection-box p  { font-size: 0.85rem; color: #78350f; margin: 0; line-height: 1.7; }
+         /* Back link button */
+        .back-link {
+            display: inline-block;
+            padding: 7px 16px;
+            background: #166534;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin: 6px 4px 0 0;
+            transition: background 0.2s;
+            
+            
+        }
+        .back-link:hover { background: #14532d; }
+        .evidences{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 0 auto;
+            border: 2px solid #808000;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="top">
+    
+        <nav class="navbar">
+            <div class="main-container">
+                <div class="container1">
+                    <div class="container2">
+                        <div class="container3">
+                            <div class="logo">
+                                <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/logo.png?raw=true" alt="Climate Action Group logo">
+                            </div>
+                            <span class="nav-heading">Climate Action</span>
+                        </div>
+                    </div>
+
+                    <!-- Desktop nav links — Team is active -->
+                    <div class="menu-links">
+                        <a href="home.html" class="nav-link">Home</a>
+                        <a href="ais.html" class="nav-link">Simulator</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                        <a href="profile.html" class="nav-link">Profile</a>
+                        <a href="feedback.html" class="nav-link">Feedback</a>
+                        <a href="team.html" class="nav-link">Team</a>
+                        <a href="sitemap.html" class="nav-link">Sitemap</a>
+                    </div>
+
+                    <!-- Mobile sidebar -->
+                    <div class="mobile-header">
+                        <input type="checkbox" id="sidebar-toogles">-
+                        <div class="logo">
+                            <label for="sidebar-toogles" class="btn1">☰</label>
+                        </div>
+                        <div class="sidebar">
+                            <div class="l-container">
+                                <label class="s-l-1">Menu</label>
+                                <label for="sidebar-toogles" class="s-l-2">X</label>
+                            </div>
+                            <div class="mhref"><a href="home.html" class="nav-link">Home</a></div>
+                            <div class="mhref"><a href="ais.html" class="nav-link">Simulator</a></div>
+                            <div class="mhref"><a href="gallery.html" class="nav-link">Gallery</a></div>
+                            <div class="mhref"><a href="profile.html" class="nav-link">Profile</a></div>
+                            <div class="mhref"><a href="feedback.html" class="nav-link">Feedback</a></div>
+                            <div class="mhref"><a href="team.html" class="nav-link">Team</a></div>
+                            <div class="mhref"><a href="sitemap.html" class="nav-link">Sitemap</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    </header>
+    <br><br><br>
+
+    <!-- Hero Banner -->
+        <div class="team-banner">
+
+            <h1>Ruwin Geenura, Climate Action Group, Student 3 </h1>
+            
+        </div>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+
+            <!-- Update the content of the following sections with the information that corresponds to the pages you implemented  -->
+
+            <section class="con-section" id="feedback-main">
+                <div class="center">
+                <h2>Feedback Page Validation Report</h2>
+                    <p style="font-size:0.875rem; color:#525252; margin:12px 0 16px;">
+                    Validated using the W3C Markup Validation Service at <strong>validator.w3.org</strong>
+                    </p> 
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/feedack_val.png?raw=true" alt="W3C validation result for feedback.html showing no errors" class="evidences">
+                                    
+                <div class="reflection-box">
+                    <h4>Reflection — feedback.html</h4>
+                    <p>
+                        During the first validation pass, <code>aria-label</code> was incorrectly placed on <code>&lt;div&gt;</code>
+                        elements for the review star ratings. These were changed to <code>&lt;p&gt;</code> tags.
+                        Programme card headings also used <code>&lt;h4&gt;</code> directly after <code>&lt;h2&gt;</code>,
+                        skipping a heading level — corrected to <code>&lt;h3&gt;</code>.
+                        After these fixes the page validated with no errors.
+                    </p>
+                </div>
+
+                <a href="pageEditor_ST3.html#feedback-page" class="back-link" target="_blank">
+                    &#8592; Back to Page Editor
+                </a>
+                </div>
+            </section>
+            
+
+           <section class="con-section" id="team-main">
+                <div class="center">
+                <h2>Team Page Validation Report</h2>
+                    <p style="font-size:0.875rem; color:#525252; margin:12px 0 16px;">
+                    Validated using the W3C Markup Validation Service at <strong>validator.w3.org</strong>
+                    </p> 
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/team_val.png?raw=true" alt="W3C validation result for team.html showing no errors" class="evidences">
+                                    
+                <div class="reflection-box">
+                    <h4>Reflection — team.html</h4>
+                    <p>
+                        Validation flagged a warning that <code>&lt;section class="team-section"&gt;</code> lacked a heading.
+                        An <code>&lt;h2&gt;</code> was added inside the section to resolve this.
+                        A stray dash character after the mobile sidebar checkbox was also removed.
+                        After these corrections the page validated with no errors.
+                    </p>
+                </div>
+
+                <a href="pageEditor_ST3.html#team-page" class="back-link" target="_blank">
+                    &#8592; Back to Page Editor
+                </a>
+                </div>
+            </section>
+
+            <section class="con-section" id="content_ST3-main">
+                <div class="center">
+                <h2 id="contain_ST3-main">Content Page Validation Report</h2>
+                    <p style="font-size:0.875rem; color:#525252; margin:12px 0 16px;">
+                    Validated using the W3C Markup Validation Service at <strong>validator.w3.org</strong>
+                    </p> 
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/content_val.png?raw=true" alt="W3C validation result for content_ST3.html showing no errors" class="evidences">
+                                    
+                <div class="reflection-box">
+                    <h4>Reflection — content_ST3.html</h4>
+                    <p>
+                        The content page validated cleanly after ensuring all images included <code>alt</code> attributes
+                        and all section elements contained at least one heading.
+                        The CSS-only contents toggle using a hidden checkbox validated without issues.
+                        No errors were present in the final build.
+                    </p>
+                </div>
+
+                <a href="pageEditor_ST3.html#content_ST3-page" class="back-link" target="_blank">
+                    &#8592; Back to Page Editor
+                </a>
+                </div>
+            </section>
+
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside class="conin-section">
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 1</li>
+                <ul>
+                        <li><a href="home.html">Home page </a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="content_ST1.html">Content</a></li>
+                    </ul>
+                <li>Student 2</li>
+                <ul> 
+                    <li><a href="splash.html">Splash Screen</a></li>
+                    <li><a href="ais.html">Action Impact Simulator</a></li>
+                    <li><a href="content_ST2.html">Content</a></li>
+                </ul>
+                    
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="feedback.html">Feedback</a> </li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="content_ST3.html">Content</a></li>
+                    </ul>
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="profile.html">User Profile </a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                        <li><a href="content_ST4.html">Content</a></li>
+                    </ul>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer"><!-- Do not edit footer -->
+        <div class="f-container">
+            <div class="f-container1">
+                <div>
+                    <span class="f-heading-0">Climate Action Group</span>
+                    <p class="f-heading">University SDG project Web Design 4COSC011C.2</p>
+                </div>
+                <div class="valid-data">
+                    <a href="pageEditor_ST3.html" target="_blank">Page Editor</a><br><br>
+                    <a href="validation_ST3.html" target="_blank">Validation</a><br><br>
+                    <a href="pageEditor_ST3.html#accessibility" target="_blank">Accessibility</a><br><br>
+                    <a href="pageEditor_ST3.html#compliance" target="_blank">Compilance</a>
+                </div>
+                <div class="social-icons">
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/icons8-facebook-48.png?raw=true" alt="Facebook icon" class="icon"> 
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/icons8-instagram-48.png?raw=true" alt="Instagram icon" class="icon"> 
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/icons8-whatsapp-48.png?raw=true" alt="WhatsApp icon" class="icon"> 
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/icons8-youtube-48.png?raw=true" alt="YouTube icon" class="icon"> 
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:20px; font-size:0.8rem; color:#737373;">
+                Student 3 — Ruwin Kawshan &nbsp;|&nbsp; w2181541 &nbsp;|&nbsp; University of Westminster
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

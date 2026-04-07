@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - provide your student name</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+    
+
+</head>
+<body>
+    
+    <!-- Update the header and the footer to be consistent with the rest of the pages you implemented -->
+
+    <header id="top">
+    
+        <nav class="navbar">
+            <div class="main-container">
+                <div class="container1">
+                    <div class="container2">
+                        <div class="container3">
+                            <div class="logo">
+                                <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/logo.png?raw=true" alt="Climate Action Group logo">
+                            </div>
+                            <span class="nav-heading">Climate Action</span>
+                        </div>
+                    </div>
+
+                    <!-- Desktop nav links — Team is active -->
+                    <div class="menu-links">
+                        <a href="home.html" class="nav-link">Home</a>
+                        <a href="ais.html" class="nav-link">Simulator</a>
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                        <a href="profile.html" class="nav-link">Profile</a>
+                        <a href="feedback.html" class="nav-link">Feedback</a>
+                        <a href="team.html" class="nav-link">Team</a>
+                        <a href="sitemap.html" class="nav-link">Sitemap</a>
+                    </div>
+
+                    <!-- Mobile sidebar -->
+                    <div class="mobile-header">
+                        <input type="checkbox" id="sidebar-toogles">-
+                        <div class="logo">
+                            <label for="sidebar-toogles" class="btn1">☰</label>
+                        </div>
+                        <div class="sidebar">
+                            <div class="l-container">
+                                <label class="s-l-1">Menu</label>
+                                <label for="sidebar-toogles" class="s-l-2">X</label>
+                            </div>
+                            <div class="mhref"><a href="home.html" class="nav-link">Home</a></div>
+                            <div class="mhref"><a href="ais.html" class="nav-link">Simulator</a></div>
+                            <div class="mhref"><a href="gallery.html" class="nav-link">Gallery</a></div>
+                            <div class="mhref"><a href="profile.html" class="nav-link">Profile</a></div>
+                            <div class="mhref"><a href="feedback.html" class="nav-link">Feedback</a></div>
+                            <div class="mhref"><a href="team.html" class="nav-link">Team</a></div>
+                            <div class="mhref"><a href="sitemap.html" class="nav-link">Sitemap</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    </header>
+    <br><br><br>
+
+     <!-- Hero Banner -->
+        <div class="team-banner">
+            <h1>Ruwin Geenura, Climate Action Group, Student 3 </h1>
+            
+        </div>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update those first three sections for the pages you were responsible to implement -->
+        <section class="con-section" id="feedback-page">
+           <h2 class="e-heading">Feedback page</h2>
+                    <h3>Technical Description</h3>
+                        <div class="e-card">
+                        <h4>HTML Structure</h4>
+                        <p>The page is built using the shared HTML template. The main content is divided into two columns using CSS Grid: a scrollable programme directory on the left and a feedback form on the right. Key HTML elements used include:</p>
+                        <ul>
+                            <li><code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> to group Personal Details and Feedback Details</li>
+                            <li><code>&lt;select&gt;</code> for the programme dropdown and multi-select involvement list</li>
+                            <li><code>&lt;datalist&gt;</code> for the searchable topic suggestions input</li>
+                            <li><code>&lt;input type="date"&gt;</code> and <code>&lt;input type="datetime-local"&gt;</code> for visit date fields</li>
+                            <li><code>&lt;textarea&gt;</code> with <code>maxlength="500"</code> for the comments field</li>
+                        </ul>
+                        <h4>CSS Techniques</h4>
+                        <p>Page-specific styles are embedded in a <code>&lt;style&gt;</code> block within the HTML file, as permitted by the coursework specification. Techniques used include:</p>
+                        <ul>
+                            <li>CSS Grid for the two-column layout on large screens</li>
+                            <li>Custom scrollbar styling using <code>::-webkit-scrollbar</code> for the programme scroll area</li>
+                            <li>CSS transitions on form inputs for focus states (green glow effect)</li>
+                            <li>Error class toggling for red border and error message visibility</li>
+                        </ul>
+                        <h4>JavaScript</h4>
+                        <p>JavaScript handles three interactive features:</p>
+                        <ul>
+                            <li><strong>Live character counter:</strong> An <code>input</code> event listener updates the counter below the textarea on every keystroke, showing remaining characters with colour warnings at 50 and 0 remaining.</li>
+                            <li><strong>Form validation:</strong> A <code>validateField()</code> function checks each required field on submit, adds/removes <code>.error</code> classes, and shows/hides inline error messages using <code>.visible</code> class toggling.</li>
+                            <li><strong>Submission confirmation:</strong> On successful validation, the form is hidden and a confirmation message is revealed using DOM manipulation.</li>
+                        </ul>
+                        <br>
+                        </div>
+               
+                
+                    <h3 class="center" id="feedback-accessibility"> Accessibility Considerations – Feedback Page </h3>
+
+                    <p>
+                        Accessibility was considered throughout the development of this webpage to ensure it is usable by a wide range of users, 
+                        including those with disabilities and users relying on assistive technologies such as screen readers and keyboard navigation.
+                    </p>
+
+                    <h4>Semantic HTML Structure</h4>
+                    <p>
+                        Semantic elements such as &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;footer&gt; were used to create a clear and meaningful structure.
+                    </p>
+                        This helps screen readers understand the layout and improves navigation for users.
+                    </p>
+
+                    <h4>Form Accessibility</h4>
+                    <p>
+                        All form inputs are properly linked with labels using the <code>for</code> attribute. Required fields are indicated using 
+                        <code>aria-required="true"</code>. This ensures users and assistive technologies can clearly identify input fields and required data.
+                    </p>
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/form.png?raw=true" class="evidence" alt=" pieace of code ss from form">
+
+                    <h4>Error Handling and Validation</h4>
+                    <p>
+                        Form validation provides real-time feedback, highlighting errors visually and displaying messages using 
+                        <code>role="alert"</code>. This ensures screen readers immediately notify users when an error occurs.
+                    </p>
+
+                    <h4>ARIA Attributes and Live Regions</h4>
+                    <p>
+                        ARIA attributes such as <code>aria-label</code> and <code>aria-live="polite"</code> are used for dynamic elements like the 
+                        character counter and confirmation messages. This allows screen readers to announce updates without interrupting the user.
+                    </p>
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/form_cmnt.png?raw=true" alt="live character count " class="evidence">
+
+                    <h4>Keyboard Accessibility</h4>
+                    <p>
+                        All interactive elements such as buttons, links, and form fields are accessible using the keyboard. Users can navigate 
+                        using the Tab and Enter keys, ensuring accessibility for users who cannot use a mouse.
+                    </p>
+
+                    <h4>Images and Alternative Text</h4>
+                    <p>
+                        All images include descriptive <code>alt</code> text. This allows screen readers to describe images to visually impaired users, 
+                        ensuring content is understandable without visual access.
+                    </p>
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/alt.png?raw=true" alt="alt text" class="evidence">
+
+                    <h4>Colour and Contrast</h4>
+                    <p>
+                        High-contrast colours were used to improve readability. Error messages are communicated using both colour and text, 
+                        ensuring accessibility for users with colour vision deficiencies.
+                    </p>
+
+                    <h4>Responsive Design</h4>
+                    <p>
+                        The page is fully responsive using CSS media queries, allowing it to function correctly on different screen sizes 
+                        and devices, including mobile phones and tablets.
+                    </p>
+
+                    <h4>Conclusion</h4>
+                    <p>
+                        These accessibility features improve usability, inclusivity, and ensure that the website can be effectively used 
+                        by a diverse range of users.
+                    </p>
+    
+                <div class="center-box">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS Grid</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Form Validation</span>
+                    
+                    <br><br>
+                    
+                    <a href="feedback.html" target="_blank" class="page-link">View Feedback Page</a>
+                    <a href="validation_ST3.html#feedbak-main" target="_blank" class="page-link">View Validation</a>
+                </div>
+            </section>
+
+                <section  class="con-section" id="team-page">
+                    <h2 class="e-heading" id="team">Team Page</h2>
+                    <div class="e-card">
+                        <h3>Technical Description</h3>
+                        <h4>HTML Structure</h4>
+                        <p>The team page uses a CSS Grid layout to display four member cards in a responsive grid — one column on mobile, two on tablet, and four on desktop. Each card uses a <code>&lt;div&gt;</code> with <code>tabindex="0"</code> and <code>role="button"</code> to ensure keyboard accessibility.</p>
+                        <ul>
+                            <li>Circular photo wrapped in a <code>&lt;div&gt;</code> for the border and scaling effect</li>
+                            <li>Expandable details panel using a hidden <code>&lt;div&gt;</code> with <code>max-height: 0</code> and overflow hidden</li>
+                            <li>All images include meaningful <code>alt</code> text describing the team member and their role</li>
+                        </ul>
+                        <h4>CSS Techniques</h4>
+                        <p>The Team Page uses only CSS for all interactivity, as permitted by the specification. Key techniques include:</p>
+                        <ul>
+                            <li><strong>Hover scaling:</strong> <code>transform: scale(1.1)</code> on the photo on <code>:hover</code> and <code>:focus</code></li>
+                            <li><strong>Expandable panel:</strong> <code>max-height</code> transitions from <code>0</code> to <code>220px</code> on hover, combined with <code>opacity</code> transition for a smooth reveal</li>
+                            <li><strong>Focus styling:</strong> <code>outline: 3px solid #4ade80</code> on <code>:focus</code> for visible keyboard navigation state</li>
+                            <li><strong>Smooth transitions:</strong> All hover effects use <code>transition</code> with <code>0.3s ease</code> timing</li>
+                        </ul>
+                        <span class="tag">HTML5</span><span class="tag">CSS Transitions</span><span class="tag">Accessibility</span><span class="tag">CSS Grid</span>
+                        <br><br>
+            
+                    </div>
+            
+                    <h3 class="center" id="team-accessibility">Accessibility Considerations – Team page </h3>
+                    <p>
+                        Accessibility was carefully considered in the design of the Team page to ensure it is usable by all users, 
+                        including those using assistive technologies such as screen readers and keyboard navigation.
+                    </p>
+
+                    <h4>Semantic Structure</h4>
+                    <p>
+                        The page uses semantic HTML elements such as &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, and &lt;section&gt; to define 
+                        a clear structure. This helps screen readers understand the layout and improves navigation.
+                    </p>
+
+                    <h4>Keyboard Accessibility</h4>
+                    <p>
+                        Each team member card is made keyboard accessible using <code>tabindex="0"</code>, allowing users to navigate 
+                        through cards using the Tab key. A visible focus style is applied to highlight the selected card.
+                    </p>
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/keyboard_acc.png?raw=true" alt="keyboard Accessability ss" class="evidence">
+
+                    <h4>ARIA Roles and Labels</h4>
+                    <p>
+                        Each card uses <code>role="button"</code> and descriptive <code>aria-label</code> attributes to explain the purpose 
+                        of the element. This ensures screen reader users understand that the cards are interactive.
+                    </p>
+
+                    <h4>Hover and Focus Interaction</h4>
+                    <p>
+                        Additional team details are revealed using both hover and keyboard focus states. This ensures that users who 
+                        cannot use a mouse can still access hidden information through keyboard navigation.
+                    </p>
+
+                    <h4>Images and Alternative Text</h4>
+                    <p>
+                        All team member images include descriptive <code>alt</code> text. This allows screen readers to describe each 
+                        image and ensures content is accessible to visually impaired users.
+                    </p>
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/alt%20ameen.png?raw=true" alt="alt text in ameen's section" class="evidence">
+
+                    <h4>Colour and Visual Accessibility</h4>
+                    <p>
+                        High-contrast colours are used for text and backgrounds to improve readability. Focus indicators are clearly 
+                        visible to help keyboard users identify their current position on the page.
+                    </p>
+
+                    <h4>Responsive Design</h4>
+                    <p>
+                        The team layout uses a responsive grid system that adapts to different screen sizes, ensuring accessibility 
+                        across mobile, tablet, and desktop devices.
+                    </p>
+
+                    <h4>Conclusion</h4>
+                    <p>
+                        These accessibility features improve usability and ensure that all users, regardless of ability, can effectively 
+                        interact with the Team page.
+                    </p>
+                
+
+                <div class="center-box">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS Transitions</span>
+                    <span class="tag">Accessibility</span>
+                    <span class="tag">CSS Grid</span>
+                    
+                    <br><br>
+                    
+                    <a href="team.html" target="_blank" class="page-link">View Team Page</a>
+                    <a href="validation_ST3.html#team-main" target="_blank" class="page-link">View Validation</a>
+                </div>
+            </section>
+
+             <section   class="con-section" id="content_ST3-page">
+                <h2 class="e-heading" > Content Page — E-Waste &amp; Climate Pollution</h2>
+                    <h3>Technical Description</h3>
+                       
+                    
+                    <div class="e-card">
+                        <h4>HTML Structure</h4>
+                        <p>The content page covers the topic of e-waste pollution and its links to climate change. The page is structured with a sticky sidebar navigation and a main article area divided into six clearly labelled sections:</p>
+                        <ul>
+                            <li>One <code>&lt;h1&gt;</code> in the hero banner for the page title</li>
+                            <li><code>&lt;h2&gt;</code> for each major section heading</li>
+                            <li><code>&lt;h3&gt;</code> for sub-headings within sections</li>
+                            <li>Each section has a unique <code>id</code> attribute targeted by the sidebar anchor links</li>
+                            <li><code>&lt;aside&gt;</code> used for the sticky sidebar navigation</li>
+                            <li><code>&lt;article&gt;</code> used to wrap the main content body</li>
+                        </ul>
+                        <h4 >CSS Techniques</h4>
+                        <ul>
+                            <li><code>position: sticky; top: 80px</code> for the sidebar navigation</li>
+                            <li><code>scroll-margin-top: 80px</code> on each section to offset the fixed navbar when jumping via anchor links</li>
+                            <li><code>position: fixed</code> for the "Go to Top" button — no JavaScript required</li>
+                            <li>CSS Grid for the stat card grid and image grid layouts</li>
+                            <li>CSS custom counter (<code>counter-reset</code> / <code>counter-increment</code>) for the numbered action list</li>
+                        </ul>
+                        <h4>Internal Navigation </h4>
+                        <p>All sidebar links use anchor links (<code>href="#section-id"</code>) to jump to sections within the same page. <code>scroll-behavior: smooth</code> is applied via CSS on the <code>html</code> element for smooth scrolling.</p>
+                        
+                    </div>
+                
+                   
+                    <h3 class="center" id="content_ST3-accessibility">Accessibility Considerations – Content Page (E-Waste)</h3>
+
+                    <p>
+                        Accessibility was considered throughout the design of the content page to ensure that information about e-waste 
+                        and climate change is accessible to all users, including those using assistive technologies such as screen readers 
+                        and keyboard navigation.
+                    </p>
+
+                    <h4>Semantic Structure</h4>
+                    <p>
+                        The page uses semantic HTML elements such as <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, 
+                        <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;aside&gt;</code> to organise content logically. 
+                        This helps screen readers understand the page structure and improves navigation.
+                    </p>
+
+                    <h4>Internal Navigation (Anchor Links)</h4>
+                    <p>
+                        A sidebar navigation menu with anchor links (e.g. <code>#what-is-ewaste</code>) allows users to quickly jump to 
+                        different sections of the page. Smooth scrolling improves user experience and orientation.
+                    </p>
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/interenal%20nav.png?raw=true" alt="Internal Navigation" class="evidence">
+
+                    <h4>Keyboard Accessibility</h4>
+                    <p>
+                        All navigation links, buttons, and interactive elements such as the “Go to Top” button are accessible using the 
+                        keyboard. Users can navigate using the Tab key and activate links using the Enter key.
+                    </p>
+
+                    <h4>Images and Alternative Text</h4>
+                    <p>
+                        All images include descriptive <code>alt</code> text explaining the visual content. This ensures that screen readers 
+                        can convey the meaning of images to visually impaired users.
+                    </p>
+
+                    <h4>ARIA Labels</h4>
+                    <p>
+                        ARIA attributes such as <code>aria-label</code> are used on interactive elements like the “Go to Top” button to provide 
+                        clear descriptions for screen reader users.
+                    </p>
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/top_lable.png?raw=true" alt="go-to-top button lable" class="evidence">
+
+                    <h4>Readable Content and Typography</h4>
+                    <p>
+                        Text is structured using headings, subheadings, and paragraphs to improve readability. Font sizes, spacing, and 
+                        line height are carefully adjusted to make long-form content easier to read.
+                    </p>
+
+                    <h4>Colour and Contrast</h4>
+                    <p>
+                        High-contrast colours are used between text and background to improve readability. Important sections such as 
+                        highlights and statistics use contrasting colours to draw attention without reducing accessibility.
+                    </p>
+
+                    <h4>Responsive Design</h4>
+                    <p>
+                        The layout uses responsive design techniques such as CSS Grid and media queries to ensure the page adapts to 
+                        different screen sizes, including mobile and tablet devices.
+                    </p>
+
+                    <h4>Visual Aids and Content Structure</h4>
+                    <p>
+                        Information is supported with visual elements such as images, statistic cards, and highlighted boxes. These 
+                        improve understanding and help users scan content efficiently.
+                    </p>
+
+                    <h4>Conclusion</h4>
+                    <p>
+                        These accessibility features ensure that the content page is inclusive, easy to navigate, and usable for a wide 
+                        range of users, supporting both readability and interaction.
+                    </p>
+              
+
+                    <div class="center-box">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS Positioning</span>
+                    <span class="tag">Anchor Links</span>
+                    <span class="tag">Semantic HTML</span>
+                    
+                    <br><br>
+                    
+                    <a href="content_ST3.html" target="_blank" class="page-link">View Content Page</a>
+                    <a href="validation_ST3.html#content_ST3-main" target="_blank" class="page-link">View Validation</a>
+                </div>
+                
+            </section>
+
+            <!-- 5. Challenges -->
+                <section id="challenges" class="con-section">
+                    <h2 class="e-heading"> Challenges &amp; Lessons Learned</h2>
+                    <div class="challenge-box">
+                        <h4>Challenge 1 — CSS max-height Transition on Team Page</h4>
+                        <p>Animating the expandable details panel on the Team Page was tricky because CSS transitions do not work on <code>height: auto</code>. I resolved this by using <code>max-height</code> with a fixed value (220px) as the expanded state, combined with an opacity transition. This creates a smooth reveal effect without needing JavaScript.</p>
+                    </div>
+                    <div class="challenge-box">
+                        <h4>Challenge 2 — Form Validation Without Page Reload</h4>
+                        <p>Implementing client-side form validation that shows inline error messages without reloading the page required careful DOM manipulation. I created a reusable <code>validateField()</code> function that adds/removes CSS classes to control error visibility, which kept the code clean and easy to maintain.</p>
+                    </div>
+                    <div class="challenge-box">
+                        <h4>Challenge 3 — Sticky Sidebar with Fixed Navbar</h4>
+                        <p>The sticky sidebar on the content page initially appeared beneath the fixed navbar when scrolling. I resolved this by setting <code>top: 80px</code> on the sticky element (matching the navbar height) and adding <code>scroll-margin-top: 80px</code> to each section so anchor links land in the correct position.</p>
+                    </div>
+                </section>
+
+            <!-- 7. JANET Compliance -->
+                <section id="compliance" class="con-section">
+                    <h2 class="e-heading">7. JANET Compliance</h2>
+                    <div class="compliance-box">
+                        <h4>Appropriate and Ethical Content</h4>
+                        <p>All content across my pages is original, educational, and directly relevant to SDG 13: Climate Action. No content has been copied from external sources. The e-waste content page presents factual, research-based information that aligns with the educational purpose of the Janet network.</p>
+                    </div>
+                    <div class="compliance-box">
+                        <h4>Responsible Use of External Resources</h4>
+                        <p>All images used are royalty-free and properly referenced in the References section of this Page Editor. No third-party content has been reproduced without attribution. External fonts (Google Fonts) are loaded from an approved CDN.</p>
+                    </div>
+                    <div class="compliance-box">
+                        <h4>Data Protection (GDPR)</h4>
+                        <p>The Feedback form does not send data to any server — it is a client-side demonstration only. No personal data is collected, stored, or transmitted, ensuring compliance with GDPR and the Janet AUP requirement to avoid collecting personal data unnecessarily.</p>
+                    </div>
+                    <div class="compliance-box">
+                        <h4>Security and Best Practices</h4>
+                        <p>The website uses no malicious code, no tracking scripts, and no unauthorised third-party libraries. All code is original or clearly attributed. The site follows secure web development principles as required by the Janet Acceptable Use Policy.</p>
+                    </div>
+                    <div class="compliance-box">
+                        <h4>Accessibility Compliance</h4>
+                        <p>All pages follow WCAG 2.1 AA guidelines as required by the Public Sector Bodies Accessibility Regulations 2018, which applies to institutions using the Janet network. Semantic HTML, alt text, and keyboard navigation have been implemented throughout.</p>
+                    </div>
+                </section>
+
+            <section class="con-section" id="group" >
+                <h2  class="e-heading"> Group Meetings and Individual Contribution Log</h2>
+                    <p class="center">A record of all group meetings attended and individual contributions made during the project</p> 
+
+                        <table >
+    
+                            <thead>
+                                <tr>
+                                    <th colspan="6">Group Meetings and Contribution Log</th>
+                                </tr>
+                                <tr>
+                                    <th>Meeting</th>
+                                    <th>Date &amp; Time</th>
+                                    <th>Format</th>
+                                    <th>Objective</th>
+                                    <th>Attended</th>
+                                    <th>Your Individual Contribution</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>25 Feb 2026</td>
+                                    <td>Physical</td>
+                                    <td>Project starting meeting</td>
+                                    <td>Yes</td>
+                                    <td>I agreed to take responsibility for the Home Page and template.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>2</td>
+                                    <td>05 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>UI/UX planning</td>
+                                    <td>Yes</td>
+                                    <td>Reviewed Feedback page wireframe layout and confirmed the two-column split design.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>3</td>
+                                    <td>12 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>Shared template design review</td>
+                                    <td>Yes</td>
+                                    <td>I reviewed the shared template and global CSS, and suggested improvements to enhance accessibility and ensure compliance with the requirements outlined in the course guide.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>4</td>
+                                    <td>19 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>Discussed the individual topic theames</td>
+                                    <td>Yes</td>
+                                    <td>I contributed to the discussion by suggesting theme ideas and helping define the required factors for structuring the main pages and content pages.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>5</td>
+                                    <td>24 Mar 2026</td>
+                                    <td>Physical</td>
+                                    <td>Progress review</td>
+                                    <td>Yes</td>
+                                    <td>I evaluated and completed key features in both the main pages and the content page, ensuring they functioned correctly and met the project requirements.</td>
+                                </tr>
+                        
+                                <tr>
+                                    <td>6</td>
+                                    <td>25 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>Progress review</td>
+                                    <td>Yes</td>
+                                    <td>I evaluated and completed the features in the Page Editor and validation pages, ensuring they functioned correctly and met the required standards.</td>
+                                </tr>
+
+                                 <tr>
+                                    <td>7</td>
+                                    <td>27 Mar 2026</td>
+                                    <td>Online</td>
+                                    <td>Final adjustments</td>
+                                    <td>Yes</td>
+                                    <td>I fixed UI issues, improved responsiveness across different screen sizes, and finalised the project details to ensure consistency and completion.</td>
+                                </tr>
+                        
+                            </tbody>
+                        
+                        </table>
+                    
+            </section>
+
+            <!-- 9. References -->
+        <section id="ref" class="con-section">
+            <h2 class="e-heading">9. References</h2>
+            <div class="e-card">
+                <ol class="ref-list">
+
+                <!-- Section 2 — Global Scale stats (62M tonnes, 22%, 82M by 2030) -->
+                <li>ITU and UNITAR (2024) <em>The Global E-waste Monitor 2024: Electronic Waste Rising Five Times Faster than Documented E-waste Recycling</em>. Available at: <a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-waste-Monitor-2024.aspx" target="_blank">itu.int</a> [Accessed 25 March 2026].</li>
+
+                <!-- Section 3 — Climate link / HFCs / incineration -->
+                <li>UNEP (2024) <em>As Electronic Waste Surges, Countries Look for Answers</em>. United Nations Environment Programme. Available at: <a href="https://www.unep.org/news-and-stories/story/electronic-waste-surges-countries-look-answers" target="_blank">unep.org</a> [Accessed 25 March 2026].</li>
+
+                <!-- Section 5 — Right to Repair (replaces broken EU Commission link) -->
+                <li>European Parliament (2024) <em>Right to Repair: Making Repair Easier and More Appealing to Consumers</em>. Available at: <a href="https://www.europarl.europa.eu/news/en/press-room/20240419IPR20590/right-to-repair-making-repair-easier-and-more-appealing-to-consumers" target="_blank">europarl.europa.eu</a> [Accessed 25 March 2026].</li>
+
+                <!-- Section 6 — WHO health impacts of e-waste -->
+                <li>World Health Organization (2023) <em>E-waste</em>. Available at: <a href="https://www.who.int/news-room/fact-sheets/detail/electronic-waste-(e-waste)" target="_blank">who.int</a> [Accessed 25 March 2026].</li>
+
+                <!-- Coursework spec -->
+                <li>University of Westminster (2025) <em>4COSC011C.2 Web Design and Development (IIT Sri Lanka)</em><a href="https://learning.westminster.ac.uk/ultra/courses/_104670_1/outline" target="_blank"> Blackboard. </a>[Accessed 25 March 2026]</li>
+
+                <!-- JANET compliance -->
+                <li>Jisc/Janet (2024) <em>Janet Acceptable Use Policy</em>. Available at: <a href="https://www.jisc.ac.uk/janet" target="_blank">jisc.ac.uk</a> [Accessed 25 March 2026].</li>
+
+                <!-- Accessibility -->
+                <li>W3C (2018) <em>Web Content Accessibility Guidelines (WCAG) 2.1</em>. Available at: <a href="https://www.w3.org/TR/WCAG21/" target="_blank">w3.org</a> [Accessed 25 March 2026].</li>
+
+                <!-- CSS / Development -->
+                <li>MDN Web Docs (2024) <em>CSS Transitions</em>. Mozilla. Available at: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions" target="_blank">developer.mozilla.org</a> [Accessed 25 March 2026].</li>
+
+                <!-- Fonts -->
+                <li>Google Fonts (2024) <em>Inter Font Family</em>. Available at: <a href="https://fonts.google.com/specimen/Inter" target="_blank">fonts.google.com</a> [Accessed 25 March 2026].</li>
+
+                <!-- Images -->
+                <li>iStockPhoto (2024) <em>Royalty-Free Images</em>. Available at: <a href="https://www.istockphoto.com" target="_blank">istockphoto.com</a> [Accessed 25 March 2026].</li>
+
+            </ol>
+            </div>
+        </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+      
+        <aside class="con-section">
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 1</li>
+                <ul>
+                        <li><a href="pageEditor_ST1.html#home-page">Home page </a></li>
+                        <li><a href="pageEditor_ST1.html#gallery-page">Gallery</a></li>
+                        <li><a href="pageEditor_ST1.html#content_ST1-page">Content</a></li>
+                    </ul>
+                <li>Student 2</li>
+                <ul> 
+                    <li><a href="pageEditor_ST2.html#spalsh-page">Splash Screen</a></li>
+                    <li><a href="pageEditor_ST2.html#ais-page">Action Impact Simulator</a></li>
+                    <li><a href="pageEditor_ST2.html#content_ST2-page">Content</a></li>
+                </ul>
+                    
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="pageEditor_ST3.html#feedback-page">Feedback</a> </li>
+                        <li><a href="pageEditor_ST3.html#team-page">Team</a></li>
+                        <li><a href="pageEditor_ST3.html#content_ST3-page">Content</a></li>
+                    </ul>
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="pageEditor_ST4.html#profile-page">User Profile </a></li>
+                        <li><a href="pageEditor_ST4.html#sitemap-page">Sitemap</a></li>
+                        <li><a href="pageEditor_ST4.html#content_ST4-page">Content</a></li>
+                    </ul>
+                <li><a href="#challenges">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#group">Group Meetings and Individual Contribution Log</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    
+    </div>
+
+
+     <footer class="footer"><!-- Do not edit footer -->
+        <div class="f-container">
+            <div class="f-container1">
+                <div>
+                    <span class="f-heading-0">Climate Action Group</span>
+                    <p class="f-heading">University SDG project Web Design 4COSC011C.2</p>
+                </div>
+                <div class="valid-data">
+                    <a href="pageEditor_ST3.html" target="_blank">Page Editor</a><br><br>
+                    <a href="validation_ST3.html" target="_blank">Validation</a><br><br>
+                    <a href="pageEditor_ST3.html#accessibility" target="_blank">Accessibility</a><br><br>
+                    <a href="pageEditor_ST3.html#compliance" target="_blank">Compilance</a>
+                </div>
+                <div class="social-icons">
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/icons8-facebook-48.png?raw=true" alt="Facebook icon" class="icon"> 
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/icons8-instagram-48.png?raw=true" alt="Instagram icon" class="icon">
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/icons8-whatsapp-48.png?raw=true" alt="WhatsApp icon" class="icon">
+                    <img src="https://github.com/ruwin-gee/Webproject/blob/main/CW%20WEB%20TEMP/IMGS/icons8-youtube-48.png?raw=true" alt="YouTube icon" class="icon">
+                </div>
+            </div>
+            <p style="text-align:center; margin-top:20px; font-size:0.8rem; color:#737373;">
+                Student 3 — Ruwin Kawshan &nbsp;|&nbsp; w2181541 &nbsp;|&nbsp; University of Westminster
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
